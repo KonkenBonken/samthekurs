@@ -9,7 +9,7 @@ export default function Main() {
         <h2>"Att vara kreatör är att inspirera"</h2>
         <p>- Sam Pettersson</p>
       </div>
-      <img src="/motiv.png" alt="Sam Pettersson" />
+      <img src="/samthekurs/motiv.png" alt="Sam Pettersson" />
     </header>
     <main>
       <h1>SamTheKurs</h1>
