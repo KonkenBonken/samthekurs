@@ -228,3 +228,22 @@ main {
     }
   }
 }
+
+section {
+  > div {
+    z-index: 3;
+    background: #000a;
+    backdrop-filter: blur(.6vmin);
+    position: fixed;
+    inset: 0;
+  }
+
+  > h1 {
+    position: relative;
+    text-align: center;
+    z-index: 4;
+    font-size: 10em;
+    padding: 1em 0;
+    color: lighten($clr-2, 25);
+  }
+}
