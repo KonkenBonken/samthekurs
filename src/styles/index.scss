@@ -24,6 +24,10 @@ header {
   isolation: isolate;
   animation: reveal-b 1.4s ease-out;
 
+  @media (aspect-ratio > 1) {
+    height: 60vh;
+  }
+
   @keyframes reveal-b {
     from {
       opacity: .8;
@@ -36,8 +40,12 @@ header {
     left: 0;
     right: 0;
     background-color: #d7e2ee;
-    backdrop-filter: blur(.3vh);
     font-size: 4.7vw;
+
+    @media (aspect-ratio > 1) {
+      background: none;
+      top: 5vh;
+    }
 
     &::after {
       content: '';
@@ -68,6 +76,11 @@ header {
       margin-left: 8vw;
       font-size: .8em;
       margin-top: -2vh;
+
+      @media (aspect-ratio > 1) {
+        margin-top: -11vh;
+        margin-left: 11vw;
+      }
     }
   }
 
@@ -95,6 +108,18 @@ header {
         filter: blur(.05em);
       }
     }
+
+    @media (aspect-ratio > 1) {
+      height: 120vh;
+      top: 3vh;
+      right: -6vh;
+
+      &:focus, &:active, &:hover {
+        scale: 1.1;
+        right: -4vh;
+        top: 7vh;
+      }
+    }
   }
 }
 
@@ -108,23 +133,42 @@ main {
   background-color: $clr-1;
   text-align: center;
 
+  @media (aspect-ratio > 1) {
+    height: 40vh;
+  }
+
   > h1 {
     background-color: $clr-4;
     color: lighten($clr-2, 25);
     margin-top: 1vh;
     animation: reveal-t .5s 0s ease-out both;
+
+    @media (aspect-ratio > 1) {
+      font-size: 2.6em;
+      margin-bottom: 0;
+    }
   }
 
   > h4 {
     font-size: 1.8em;
     margin-bottom: .7vh;
     animation: reveal-t .5s .1s ease-out both;
+
+    @media (aspect-ratio > 1) {
+      margin-top: .4em;
+      font-size: 2.3em;
+    }
   }
 
   > h5 {
     font-size: 1.7em;
     margin: 3vh 1vh 0;
     animation: reveal-t .5s .2s ease-out both;
+
+    @media (aspect-ratio > 1) {
+      margin-top: 0;
+      font-size: 2.3em;
+    }
   }
 
   > div {
@@ -133,6 +177,8 @@ main {
     height: 2em;
     display: grid;
     place-items: center;
+
+    @media (aspect-ratio > 1) {}
 
     > i {
       font-size: 2.8em;
@@ -167,6 +213,7 @@ main {
     border-radius: .5vh;
     font-size: 1.6em;
     font-weight: bolder;
+    cursor: pointer;
     animation: reveal-t .5s .5s ease-out both;
 
     &:focus, &:active, &:hover {
